@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    content: url("../images/11_background.png");
+    z-index: -4;
+}
+#ground {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    content: url("../images/01_ground.png");
+    z-index: 0;
+
+}
+#clouds {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    content: url("../images/09_distant_clouds1.png");
+    z-index: -4;
+
+}
+
+#hill {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    content: url("../images/05_hill1.png");
+    z-index: -3;
+}
+#trees {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    content: url("../images/02_trees and bushes.png");
+    z-index: -1;
+}
+
+#distant_trees {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    content: url("../images/03_distant_trees.png");
+    z-index: -2;
+
+}
+
+#character {
+    position: absolute;
+    bottom: 120px;
+    left: 20%;
+    width: 200px;
+    content: url("../images/walking.gif");
+    z-index: 1;
+}
+
