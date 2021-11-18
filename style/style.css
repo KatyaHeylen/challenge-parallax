@@ -4,14 +4,15 @@
     box-sizing: border-box;
 }
 #character {
-    background-image: url("../images/walking.gif");
-    background-size: cover;
-    width: 160px;
-    height: 150px;
+    background-image: url("../images/idle.gif");;
+    background-size: 110px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    bottom: 127px;
-    left: 40vw;
+    bottom: 37px;
+    left: 50vw;
     z-index: 2;
+    background-repeat: no-repeat;
 }
 
 #background {
@@ -27,7 +28,7 @@
     width: 100%;
     background-image: url("../images/01_ground.png");
     background-position: bottom;
-    background-size: 1000px;
+    background-size: 940px;
     background-repeat: repeat-x;
     z-index: 0;
 
