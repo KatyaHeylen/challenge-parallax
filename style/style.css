@@ -10,17 +10,9 @@
     height: 200px;
     position: absolute;
     bottom: 37px;
-    left: 50vw;
+    left: 40vw;
     z-index: 2;
     background-repeat: no-repeat;
-}
-
-#background {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../images/11_background.png");
-    z-index: -4;
 }
 #ground {
     position: absolute;
@@ -30,9 +22,31 @@
     background-position: bottom;
     background-size: 940px;
     background-repeat: repeat-x;
-    z-index: 0;
+    z-index: 1;
 
 }
+#trees {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/02_trees and bushes.png");
+    background-position: 0 70%;
+    background-size: 800px;
+    background-repeat: repeat-x;
+    z-index: 0;
+}
+#distant_trees {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/03_distant_trees.png");
+    background-position: 20px 50%;
+    background-size: 700px;
+    background-repeat: repeat-x;
+    z-index: -1;
+
+}
+
 #clouds {
     position: absolute;
     width: 100%;
@@ -41,7 +55,7 @@
     background-position: top;
     background-repeat: repeat-x;
     background-size: 1500px;
-    z-index: -2;
+    z-index: -1;
 
 }
 
@@ -54,27 +68,13 @@
     background-position: 0 70%;
     z-index: -2;
 }
-#trees {
+
+#background {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-image: url("../images/02_trees and bushes.png");
-    background-position: 0 70%;
-    background-size: 800px;
-    background-repeat: repeat-x;
-    z-index: 0;
-}
-
-#distant_trees {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-image: url("../images/03_distant_trees.png");
-    background-position: 20px 50%;
-    background-size: 700px;
-    background-repeat: repeat-x;
-    z-index: -1;
-
+    background-image: url("../images/11_background.png");
+    z-index: -3;
 }
 
 
