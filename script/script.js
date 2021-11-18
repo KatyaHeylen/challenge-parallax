@@ -8,6 +8,7 @@ let distanttrees = document.getElementById("distant_trees");
 let clouds = document.getElementById("clouds");
 let ground = document.getElementById('ground');
 
+
 changeSpirit();
 changePosition();
 fly();
@@ -19,6 +20,7 @@ document.addEventListener('keydown', function (event) {
         keys.push(event.key);
         console.log(keys);
         changeSpirit();
+        console.log(x,y);
     }
 });
 
@@ -46,18 +48,24 @@ function changePosition() {
     distanttrees.style.backgroundPositionX = 2 * x + "px";
     clouds.style.backgroundPositionX = x + "px";
     setTimeout(changePosition, tic);
+
 }
 
 function fly () {
-    if (keys.includes('ArrowUp')) {
+    if (keys.includes('ArrowUp') && parseInt(y) < 520) {
        y += 6;
+    }
+    else if(parseInt(y) > 10) {
+        y -= 6;
     }
     character.style.bottom = 37 + y + "px";
     setTimeout(fly, tic);
+
 }
 
+
 function fallingDown () {
-    if (keys.includes('ArrowDown')) {
+    if (keys.includes('ArrowDown') && parseInt(y) > 0) {
         y -= 8;
     }
     character.style.bottom = y + "px";
@@ -78,6 +86,8 @@ function changeSpirit() {
     character.style.backgroundSize = "260px";
     }
 }
+
+
 
 
 
