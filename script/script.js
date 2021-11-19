@@ -7,6 +7,9 @@ let treesbushes = document.getElementById("trees");
 let distanttrees = document.getElementById("distant_trees");
 let clouds = document.getElementById("clouds");
 let ground = document.getElementById('ground');
+let obstacle1 = document.getElementById("obstacle1");
+let obstacle2 = document.getElementById("obstacle2");
+let obstacle3 = document.getElementById("obstacle3");
 
 
 changeSpirit();
@@ -47,6 +50,10 @@ function changePosition() {
     treesbushes.style.backgroundPositionX = 3 * x + "px";
     distanttrees.style.backgroundPositionX = 2 * x + "px";
     clouds.style.backgroundPositionX = x + "px";
+    obstacle1.style.left = 6 * x + "px";
+    obstacle2.style.left = 4 * x + "px";
+    obstacle3.style.right = 2 * x + "px";
+
     setTimeout(changePosition, tic);
 
 }
@@ -63,27 +70,26 @@ function fly () {
 
 }
 
-
 function fallingDown () {
     if (keys.includes('ArrowDown') && parseInt(y) > 0) {
-        y -= 8;
+        y -= 10;
     }
     character.style.bottom = y + "px";
     setTimeout(fallingDown, tic);
 }
 
 function changeSpirit() {
-    if (keys.length === 0) {
-    character.style.backgroundImage = "url(../images/idle.gif)";
-    character.style.backgroundSize = "100px";
+    if (keys.includes("ArrowUp")) {
+        character.style.backgroundImage = "url(../images/fly.png)";
+        character.style.backgroundSize = "155px";
     }
-    else if (keys.includes("ArrowUp")) {
-    character.style.backgroundImage = "url(../images/fly.png)";
-    character.style.backgroundSize = "155px";
+    else if (keys.length !== 0) {
+        character.style.backgroundImage = "url(../images/walking.gif)";
+        character.style.backgroundSize = "260px";
     }
     else {
-    character.style.backgroundImage = "url(../images/walking.gif)";
-    character.style.backgroundSize = "260px";
+    character.style.backgroundImage = "url(../images/idle.gif)";
+    character.style.backgroundSize = "100px";
     }
 }
 

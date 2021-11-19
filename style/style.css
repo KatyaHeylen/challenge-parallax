@@ -18,7 +18,7 @@
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-image: url("../images/01_ground.png");
+    background-image: url("../images/01_ground (1).png");
     background-position: bottom;
     background-size: 940px;
     background-repeat: repeat-x;
@@ -75,6 +75,42 @@
     height: 100vh;
     background-image: url("../images/11_background.png");
     z-index: -3;
+}
+
+#obstacle1 {
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    width: 100px;
+    height: 110px;
+    z-index: 2;
+    background-image: url("../images/sus3.png");
+    background-repeat: no-repeat;
+    background-size: 90px;
+}
+
+#obstacle2 {
+    position: absolute;
+    margin-right: 50px;
+    width: 90px;
+    height: 90px;
+    z-index: 2;
+    background-image: url("../images/sus1.png");
+    background-repeat: no-repeat;
+    background-size: 70px;
+}
+
+#obstacle3 {
+    position: absolute;
+    right: 200px;
+    top: 200px;
+    width: 90px;
+    height: 90px;
+    background-image: url("../images/sus4.png");
+    background-repeat: no-repeat;
+    background-size: 70px;
+    z-index: 2;
+    transform: scaleX(-1);
 }
 
 
