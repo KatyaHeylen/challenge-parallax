@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    overflow: hidden;
+}
 #character {
     background-image: url("../images/idle.gif");;
     background-size: 110px;
@@ -79,7 +82,7 @@
 
 #obstacle1 {
     position: absolute;
-    bottom: 70px;
+    bottom: 30px;
     left: 30px;
     width: 100px;
     height: 110px;
@@ -103,7 +106,7 @@
 #obstacle3 {
     position: absolute;
     right: 200px;
-    top: 200px;
+    top: 250px;
     width: 90px;
     height: 90px;
     background-image: url("../images/sus4.png");
@@ -112,6 +115,17 @@
     z-index: 2;
     transform: scaleX(-1);
 }
+ #target {
+     position: absolute;
+     right: 100px;
+     bottom: 50px;
+     width: 90px;
+     height: 90px;
+     background-image: url("../images/target1.png");
+     background-repeat: no-repeat;
+     background-size: 70px;
+     z-index: 2;
+ }
 
 
 

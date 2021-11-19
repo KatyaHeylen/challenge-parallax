@@ -11,12 +11,15 @@ let obstacle1 = document.getElementById("obstacle1");
 let obstacle2 = document.getElementById("obstacle2");
 let obstacle3 = document.getElementById("obstacle3");
 
-
-changeSpirit();
-changePosition();
-fly();
-fallingDown();
-
+function Game ()
+{
+    changeSpirit();
+    changePosition();
+    fly();
+    fallingDown();
+    moveObstacles();
+}
+Game();
 
 document.addEventListener('keydown', function (event) {
     if (event.key && !keys.includes(event.key)) {
@@ -50,12 +53,15 @@ function changePosition() {
     treesbushes.style.backgroundPositionX = 3 * x + "px";
     distanttrees.style.backgroundPositionX = 2 * x + "px";
     clouds.style.backgroundPositionX = x + "px";
-    obstacle1.style.left = 6 * x + "px";
-    obstacle2.style.left = 4 * x + "px";
-    obstacle3.style.right = 2 * x + "px";
-
     setTimeout(changePosition, tic);
 
+}
+
+function moveObstacles () {
+    obstacle1.style.left = 2 * x + "px";
+    obstacle2.style.left =  6 * x + "px";
+    obstacle3.style.right = 4 * x + "px";
+    setTimeout(moveObstacles, tic);
 }
 
 function fly () {
@@ -67,12 +73,11 @@ function fly () {
     }
     character.style.bottom = 37 + y + "px";
     setTimeout(fly, tic);
-
 }
 
 function fallingDown () {
     if (keys.includes('ArrowDown') && parseInt(y) > 0) {
-        y -= 10;
+        y -= 8;
     }
     character.style.bottom = y + "px";
     setTimeout(fallingDown, tic);
@@ -92,6 +97,11 @@ function changeSpirit() {
     character.style.backgroundSize = "100px";
     }
 }
+
+
+
+
+
 
 
 
