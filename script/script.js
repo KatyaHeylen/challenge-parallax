@@ -85,15 +85,15 @@ function fallingDown () {
 
 function changeSpirit() {
     if (keys.includes("ArrowUp")) {
-        character.style.backgroundImage = "url(./../images/fly.png)";
+        character.style.backgroundImage = "url(./images/fly.png)";
         character.style.backgroundSize = "155px";
     }
     else if (keys.length !== 0) {
-        character.style.backgroundImage = "url(./../images/walking.gif)";
+        character.style.backgroundImage = "url(./images/walking.gif)";
         character.style.backgroundSize = "260px";
     }
     else {
-    character.style.backgroundImage = "url(./../images/idle.gif)";
+    character.style.backgroundImage = "url(./images/idle.gif)";
     character.style.backgroundSize = "100px";
     }
 }
